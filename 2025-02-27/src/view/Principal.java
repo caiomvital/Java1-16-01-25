@@ -1,28 +1,33 @@
 package view;
 
-import model.Contato;
-import repositories.ContatoRepositoryImpl;
-import service.ContatoService;
+import controller.ContatoController;
 
 public class Principal {
-public static void main(String[] args) {
-	
-	
-	
-	ContatoRepositoryImpl impl = new ContatoRepositoryImpl();
+	public static void main(String[] args) {
 
-	ContatoService service = new ContatoService(impl);
-	service.salvar();
-	
-	System.out.println(ContatoRepositoryImpl.contatos);
-	
-	
-	service.localizarPorNome();
-	service.salvar();
-	service.salvar();
-	
-	
-	service.listarContatos();
-	
+		ContatoController.iniciarPrograma();
+
+	}
 }
-}
+
+//	service.salvar();
+//	service.salvar();
+//	service.listarContatos();
+//	service.alterar();
+//	service.listarContatos();
+//	service.remover();
+//	service.listarContatos();
+
+//	Scanner scan = new Scanner(System.in);
+//
+//	int x = scan.nextInt();
+
+//	while(true) {
+//		System.out.println("Digite 10");
+//		x = scan.nextInt();
+//		
+//		if(x == 10) {
+//			break;
+//		}
+//		
+//	}
